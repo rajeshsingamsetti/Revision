@@ -66,6 +66,22 @@ the default branch is master according to our requirement we will crete feature 
 the default server name is origin
 
 
+create ur folder
+clone the github url
+
+make any changes
+
+git staus
+now our file in working directory we need to move stagging area for that
+git add filename
+
+git commit -m "message"  (by doing this it will go from staging to local repo)
+
+
+now from your local repo to remote server you need to push the code.
+
+git push origin master
+
 
 
 
