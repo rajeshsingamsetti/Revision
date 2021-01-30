@@ -3,3 +3,73 @@ git installation & setup
 
 *configure git
 
+git config --global (.git-config it will contain our personal data information)
+
+git config --system (data of system users )
+
+git config --local ( particular projects repo information)
+
+git config --global user.name "rajsing" 
+git config --global user.email "githubloginmail" 
+
+git config --global -e (to see or edit the global config data)
+
+git config --list (shows the total configuration details).
+
+
+* help
+git help config
+
+* windows configure notepad
+
+install notepad++
+
+
+after come to c folder + program files *86 + click on notepad++ + under inside application + above copy the path 
+
+
+this pc + right click + propeties + click on advanced system settings + click on environment variables + under system variable click on path check on click on edit
+click on new + paste ur notepad ++ path + ok + ok + ok.
+
+
+go to git bash type notepad++ filename (it will open your notepad ++ application).
+
+to resize the name
+notepad++ .bash_profile
+alias code='notepad++ .exe -multiInst -nosession'
+
+save it
+type code in gitbash
+
+* to make any code editor as default editor
+
+git config --global core.editor "notepad++ .exe  -multiInst -nosession'
+
+
+
+* git work flow
+
+terms
+clone
+tracked/untracked files (.git it will track everything)
+branch
+
+******** heart of git flow
+local (working directory + stagging area or indix area + repository .git folder) ==> remote git hub
+
+examples:
+terms:
+master
+origin
+
+the default branch is master according to our requirement we will crete feature branches 
+the default server name is origin
+
+
+
+
+
+
+
+
+
