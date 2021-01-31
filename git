@@ -73,7 +73,7 @@ make any changes
 
 git staus
 now our file in working directory we need to move stagging area for that
-git add filename
+git add filename (revert back git restore filename)
 
 git commit -m "message"  (by doing this it will go from staging to local repo)
 
@@ -81,6 +81,89 @@ git commit -m "message"  (by doing this it will go from staging to local repo)
 now from your local repo to remote server you need to push the code.
 
 git push origin master
+
+
+********* to add an existing github account to code
+
+git remote add origin YOUR_REMOTE_REPOSITORY_URL
+** fatal: remote origin already exists.
+to solve above issue
+
+git remote set-url origin https://github.com/rajeshsingamsetti/Revision.git
+
+git remote -v
+
+git push -u origin master
+
+
+* git status shortcuts
+git status --short
+git status --??
+git status --A
+git status --M
+
+
+** ignoring files
+vi .gitignore
+filename.php (all location file name ignore)
+/filename.php (cureent folder file)
+* .txt
+* .js
+!main.js (don't take all js only take main.js file)
+build/
+
+**** Git Diff (shows the content where changed (git status will shows the changed file name))
+
+it will shows the difference netween working directory file && stagging directory file
+
+git diff --staged
+
+
+**** git commit
+
+git commit -v(willl give huge amount information)
+
+git commit -m "message"
+
+
+
+**** git log
+
+
+we will know the complete history about that project
+
+git log 
+git log  -p (it will shows the diff between each every 2 commits)
+
+git log -2 (displays the latest 2 commits)
+
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
+
+
+********** git branching *****************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
