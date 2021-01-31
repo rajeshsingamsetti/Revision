@@ -262,6 +262,170 @@ git branch --merge (meging branch details)
 git branch --no-merge (meging branch details)
 
 
+now the same file of master and child made some changes.commit
+now merge
+
+git branch --merge branchname
+
+now we will get conflicts
+
+to see the conflicts
+
+git status
+
+now we will see the error file
+
+vi filename (remove conflicts)
+
+git add .
+git status
+
+
+next concepts:
+
+
+alias
+remote branching
+stashing
+rebase
+tagging
+
+********* remote branching
+git clone url
+after add one file in github
+when we will clone git will give default one server name that server name:
+
+git remote
+ origin
+
+** fetch && pull
+
+to get remote folder and files to local we will use
+
+git fetch and pull
+
+git fetch (the data will come to remote to local but it won't apply)
+git pull (it will take data from remote and apply to local working code)
+
+
+git fetch origin 
+git branch -a
+
+the data will there in origin/master
+
+git merge origin/master
+ls
+
+
+git pull origin master (from remote)
+
+ls the latest data will therein local
+
+
+
+*** whenever you do git push you must do git pull
+git pull origin master
+
+git push origin master
+
+
+
+*** git diff toll
+p4merge
+
+
+****** GIT REBASE
+
+
+insted of git merge will use rebase
+git rebase branchname
+
+git merge and rebase both are same but number commits will lesser in git rebase
+
+ref : https://www.javatpoint.com/git-rebase
+
+
+git rebase lesser commit history
+
+
+
+
+*** git stashing:(recyclebin)
+
+Sometimes you want to switch the branches, but you are working on an incomplete part of your current project. 
+You don't want to make a commit of half-done work. Git stashing allows you to do so. The git stash command enables you to switch branches 
+without committing the current branch.
+
+ref url: https://www.javatpoint.com/git-stash
+
+git stash filename
+
+git stash list
+
+git stash apply (latest stash will come)
+
+git stash drop
+
+git stash list
+
+to apply particulat stash
+
+git stash apply stash@{1}
+
+
+
+
+git stash -u 
+
+
+git stash pop
+
+
+
+** creating a branch from stash
+
+
+git stash branch branch name
+
+
+
+** git clean (apply for untracked file) (be careful)
+
+git clean -f -d (-d for directory clean)
+
+
+** git tagging (version relese ) we can mark those commits
+
+git tag -l
+
+
+git tag v1.0 (under latest commit tag will create)
+
+if we want add description
+
+git tag -a v2.0 -m "jkfhg"
+
+
+git tag (will list the tags)
+
+
+git tag -a v1.0 commitid first 5 letters
+
+
+git push origin master --tags 
+
+
+git tag -list "v1.*"
+
+
+
+
+
+
+
+
+    
+
 
 
 
