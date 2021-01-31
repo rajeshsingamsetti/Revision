@@ -136,13 +136,152 @@ git log
 git log  -p (it will shows the diff between each every 2 commits)
 
 git log -2 (displays the latest 2 commits)
-
+git log --oneline
 git log --pretty=oneline
 git log --pretty=short
 git log --pretty=full
 
 
 ********** git branching *****************
+mkdir pro
+git init
+vi somefile
+git add .
+git commit -m "message"
+
+** when we commit each time it will create an blob file individually
+tree will merge the all the blob files
+
+this is internal background process
+
+now the git log will see 2 commits (as we discuss above concept)
+
+RAJs-MacBook-Pro:branch rajsingam$ git log
+commit e975a723745d55469b3253ba7369154146c9f23b (HEAD -> master)
+Author: raj singsm <rajeshsingamsetties@gmail.com>
+Date:   Sun Jan 31 08:30:50 2021 +0530
+
+    second commit
+
+commit 80e451c26f60f4ef3b78c07df83b4b3d36842117
+Author: raj singsm <rajeshsingamsetties@gmail.com>
+Date:   Sun Jan 31 08:25:05 2021 +0530
+
+    first file
+    
+    
+note: each and every commit will link to previous commit
+
+***Branch:
+it is nothing but a pointer it always points to latest commit
+
+creating a branch
+
+git branch featurename
+
+head (always represent cureent branch to see git log)
+
+to love from one branch to another branch
+
+git checkout branchname
+
+RAJs-MacBook-Pro:branch rajsingam$ git log --oneline
+e975a72 (HEAD -> master, sidemenu) second commit
+80e451c first file
+RAJs-MacBook-Pro:branch rajsingam$ git checkout sidemenu
+Switched to branch 'sidemenu'
+RAJs-MacBook-Pro:branch rajsingam$ git log --oneline
+e975a72 (HEAD -> sidemenu, master) second commit
+80e451c first file
+
+
+
+
+above will see after moving other branch it will head represent the current branch)
+
+create one file like sidemenu.txt
+
+git add .
+git commit
+
+now move to master branch
+
+git checkout master
+
+
+now check the log
+
+RAJs-MacBook-Pro:branch rajsingam$ git log --oneline
+82e0627 (HEAD -> sidemenu) added sidemenu
+e975a72 (master) second commit
+80e451c first file
+RAJs-MacBook-Pro:branch rajsingam$ git checkout master
+Switched to branch 'master'
+RAJs-MacBook-Pro:branch rajsingam$ git log --oneline
+e975a72 (HEAD -> master) second commit
+80e451c first file
+
+
+above previous side menu branch commit and after master swith only showing master commmits
+
+note : child branch commits not shows in master logs to get all branches info
+
+git log --oneline --all
+
+
+** now master type (ls) here the child branch file not displaying
+
+now change onefile content in master and commit it
+
+git log --oneline --graph --all (graphical representation)
+
+**** to create a branch and move branch at same time means
+
+git checkout -b mainsection
+
+edit the same master file what u commit
+
+commit it
+
+
+****** GIT merging
+
+note which branch you are going merget you need to move to that branch in my case i am going master
+git checkout master
+
+git merge mainsection(branchname).
+
+** delete a branch
+
+
+git branch -d branchname
+
+****** merge conflicts
+git branch --merge (meging branch details)
+
+git branch --no-merge (meging branch details)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
